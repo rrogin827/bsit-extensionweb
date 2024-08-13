@@ -1,0 +1,251 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; 
+    color: #333; 
+}
+
+/* Header Styling */
+header {
+    background-color: #800000; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    color: #fdfdfd;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex; 
+    align-items: center;  
+    justify-content: space-between; /* Distribute space evenly */
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500; 
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    padding: 10px 15px; /* Add padding for better visual and hover effect */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    display: flex;           /* Enable Flexbox for vertical alignment */
+    align-items: center;     /* Center the text vertically */
+}
+
+nav a:hover {
+    color: #fbff00; /* Yellow on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle white background on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+/* Add a subtle animation to the active tab */
+nav li.active a, 
+nav li.dropdown.active > a { /* Target the active dropdown link as well */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background */
+    box-shadow: inset 0 -2px 0 0 #800000; /* Maroon underline */
+}
+
+.logo-and-name-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    flex-grow: 1; 
+    flex-basis: 60%; /* Adjust this value as needed */
+}
+
+
+
+.site-name {
+    margin-left: 20px; 
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase; 
+    font-size: 1.2em; /* Slightly reduce font size for better fit */
+}
+
+.site-name br {
+    display: block;
+    margin-bottom: 3px; 
+}
+
+.site-name:first-line {
+    font-size: 1.5em; 
+}
+
+.site-name:nth-of-type(2) {
+    font-size: 1em; 
+}
+
+.site-name:nth-of-type(3) { /* Style the third line */
+    font-size: 1em; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+    flex-grow: 2; 
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+
+
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) { 
+    .logo-and-name-container {
+        flex-direction: column; 
+        align-items: flex-start; 
+        text-align: center
+    }
+
+    .site-name {
+        margin-left: 0;
+        margin-top: 10px; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        align-items: center
+    }
+
+    nav li {
+        margin: 10px 0; 
+    }
+}
+
+/* ... (rest of your existing CSS) ... */
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative; 
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute; 
+    background-color: #fff; /* White background for better contrast */
+    min-width: 200px; /* Slightly wider for readability */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    border-radius: 5px; /* Add rounded corners */
+    overflow: hidden; /* Hide any content that overflows */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+    animation: slideDown 0.3s ease; /* Slide down animation */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.dropdown-content a {
+    color: #333; /* Dark gray text */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.dropdown-content a:hover {
+    background-color: #800000; /* Maroon background on hover */
+    color: #fff; /* White text on hover */
+}
+
+
+/* Container Styling */
+.container {
+ display: flex;
+ justify-content: space-between;
+align-items: center;
+ max-width: 1200px;
+margin: 0 auto;
+ padding: 0 20px; 
+}
+
+/* Logo Styling */
+.logo img {
+ height: 80px;
+transition: opacity 1s ease-in-out; 
+ }
+  .logo img.hidden {
+ opacity: 0; 
+}
+
+ #logo1.fade-out {
+ opacity: 0;
+ }
+ 
+ #logo2.fade-in {
+ opacity: 1;
+ display: block; 
+}
+
+/* Other Styles */
+header + img {
+ width: 100%; 
+ height: 200px; 
+ object-fit: cover; 
+}
+
+.video-container { 
+ margin: 20px 0; 
+ width: 50%; 
+ padding: 10px;
+}
+
+video {
+border-radius: 5px; 
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.content-container {
+ display: flex; 
+}
+
+.right-container {
+ width: 50%; 
+ padding: 20px; 
+background-color: #f5f5f5; 
+border-left: 1px solid #ddd; 
+}
+
+.right-container h2 {
+ color: #800000; 
+margin-bottom: 10px;
+ text-align: center;
+}
+
+.right-container p {
+line-height: 1.6; 
+margin-bottom: 15px;
+}
+
+footer {
+text-align: center; 
+padding: 20px;
+ background-color: #800000; 
+ border-top: 1px solid #ddd; 
+ margin-top: 20px; 
+ color:#ddd
+}
+
+
+/*Addition*/
